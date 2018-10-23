@@ -1,6 +1,5 @@
-package Lesson1.Exercise2;
+package Lesson1.Exercise2_Sorts;
 
-import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
 

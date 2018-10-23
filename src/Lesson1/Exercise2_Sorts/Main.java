@@ -1,4 +1,4 @@
-package Lesson1.Exercise2;
+package Lesson1.Exercise2_Sorts;
 
 public class Main {
     public static void main(String[] args) {
