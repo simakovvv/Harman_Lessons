@@ -1,16 +1,12 @@
 package Lesson1.Exercise3_Strings;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
+import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Strings {
 
     private String word;
-    private StringBuilder word1;
     private char aChar;
     private Scanner reader = new Scanner(System.in); // Reading from System.in
 
@@ -38,16 +34,12 @@ public class Strings {
         System.out.println("Enter the character for searching: ");
         String s = reader.nextLine();
         aChar = s.charAt(0); // Scans the next token of the input as an int.
-        //once finished
-        reader.close();
         return aChar;
     }
     public char[] keyboardCharArrInput()  {
         System.out.println("Enter the word for searching: ");
         String s = reader.nextLine();
         char[] aChar = s.toCharArray(); // Scans the next token of the input as an int.
-        //once finished
-        reader.close();
         return aChar;
     }
 
@@ -69,11 +61,24 @@ public class Strings {
    }
     public boolean checkAnagramm(Strings someWord){
         boolean result;
-        if(someWord.equals(word1.reverse())){
-            return result = true;
-        } else {
-            return result = false;
-        }
+        // Early termination check, if strings are of unequal lengths,
+        // delete spaces and set lower case
+        word=word.toLowerCase().replaceAll("\\s+","");;
+        someWord.setWord(someWord.getWord().toLowerCase().replaceAll("\\s+",""));
+        // translate into char[] and sort
+        char[] c1 = word.toCharArray();
+        char[] c2 = someWord.getWord().toCharArray();
+        Arrays.sort(c1);
+        Arrays.sort(c2);
+        String sc1 = new String(c1);
+        String sc2 = new String(c2);
+        return sc1.equals(sc2);
     }
+
+    public BigInteger toHexadecimal(){
+       BigInteger num = new BigInteger(word, 16);
+       return num;
+    }
+
 
 }
