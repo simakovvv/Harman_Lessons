@@ -16,8 +16,15 @@ public class Main {
 
         MyThread myThread1 = new MyThread(count++, "runFinalisation");
         Thread exampleThread1 = new Thread(myThread1);
-        exampleThread1.start();
+        exampleThread1.start();//I saw the execution of the method only when I threw an exception by rerunning the stream.
 
+        MyThread myThread2 = new MyThread(count++, "GarbageCollector");
+        Thread exampleThread2 = new Thread(myThread2);
+        exampleThread2.start();
+
+        MyThread myThread3 = new MyThread(count++, "runFinalisation");
+        Thread exampleThread3 = new Thread(myThread3);
+        exampleThread3.start();
         try {
 
             exampleThread.join();
