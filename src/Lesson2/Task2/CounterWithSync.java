@@ -1,8 +1,7 @@
 package Lesson2.Task2;
 
 public class CounterWithSync implements ICounter {
-    private volatile int counter = 0;
-
+    private int counter = 0;
 
     public synchronized int getCounter() {
         return counter;

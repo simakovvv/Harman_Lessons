@@ -1,7 +1,5 @@
 package Lesson2.Task2;
 
-import Lesson2.Task1.ThreadKillerClass;
-
 public class Main {
     public static void main(String[] args) {
         //write a short program in which two threads both increment a shared integer repeatedly,
@@ -21,6 +19,7 @@ public class Main {
         firstThread.start();
         secondThread.start();
 
+        // Now let's run threads with a synchronized counter.
         CounterThread counterThread2 = new CounterThread(counterWithSync, threadCounter++);
         CounterThread counterThread3 = new CounterThread(counterWithSync, threadCounter++);
 
