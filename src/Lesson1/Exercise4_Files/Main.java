@@ -38,8 +38,19 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("... file copied");
         System.out.println("---------------------------------------------");
 
+       /* System.out.println("Task4 Split single text file to two different files having 30% and 70% information");
+        Files file3 = new Files();
+        try {
+            file3.splitFile(new File("resources/temp.txt"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("... file splitted");
+        System.out.println("---------------------------------------------");
+*/
 
     }
 }

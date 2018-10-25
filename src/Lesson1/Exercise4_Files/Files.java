@@ -60,21 +60,56 @@ public class Files {
         return list;
     }
 
+    //Task3 Copy file1.txt to file2.txt
     public void copyFile(String source, String dest) throws IOException {
 
-        try{
-            FileInputStream fstream = new FileInputStream(source);
-            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-            FileOutputStream ostream = new FileOutputStream(dest);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(ostream));
-            String strLine;
-            while ((strLine = br.readLine()) != null){
-                bw.write(strLine+"\n");
-                bw.flush();
-            }
+        try(FileInputStream fstream = new FileInputStream(source);
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream))){
 
+            try(FileOutputStream ostream = new FileOutputStream(dest);
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(ostream))) {
+
+                String strLine;
+                while ((strLine = br.readLine()) != null) {
+                    bw.write(strLine + "\n");
+                    bw.flush();
+                }
+            }
         }catch (IOException e){
-            System.out.println("Ошибка");
+            e.printStackTrace();
         }
     }
+
+    private int getScorePercent(long total, int percent){
+        System.out.println(total+" " +((total * percent) / 100));
+        return (int) ((total * percent) / 100);
+    }
+
+    // Task4 Split single text file to two different files having 30% and 70% information
+    public void splitFile(File f) throws IOException {
+        int partCounter = 1;//fotmat of name parts from 001, 002, 003, ...
+        int sizeOfFile1 = getScorePercent(f.length(),30);// get file size
+        int sizeOfFile2 = getScorePercent(f.length(),70);// get file size
+        byte[] buffer = new byte[(int) f.length()];
+        String fileName = f.getName();
+        //try-with-resources to ensure closing stream
+        try (FileInputStream fis = new FileInputStream(f);
+             BufferedInputStream bis = new BufferedInputStream(fis)) {
+            int bytesAmount = bis.read(buffer);
+            //write each chunk of data into separate file with different number in name
+            String filePartName = String.format("%s.%03d", fileName, partCounter++);
+            File newFile = new File(f.getParent(), filePartName);
+
+            String filePartName1 = String.format("%s.%03d", fileName, partCounter++);
+            File newFile1 = new File(f.getParent(), filePartName1);
+
+            try (FileOutputStream out = new FileOutputStream(newFile)) {
+                out.write(buffer, 0, sizeOfFile1);
+            }
+            try (FileOutputStream out = new FileOutputStream(newFile1)) {
+                out.write(buffer, sizeOfFile1, sizeOfFile2);
+            }
+        }
+    }
+
 }
