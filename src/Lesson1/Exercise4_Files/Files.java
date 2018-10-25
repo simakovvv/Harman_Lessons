@@ -1,12 +1,7 @@
 package Lesson1.Exercise4_Files;
 
 import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.*;
-
-import static com.sun.org.apache.xerces.internal.utils.SecuritySupport.getResourceAsStream;
 
 public class Files {
     private String folder;
@@ -19,7 +14,6 @@ public class Files {
             while ((strLine = br.readLine()) != null){
                 list.add(strLine);
             }
-
             br.close();
             fstream.close();
         }catch (IOException e){
@@ -80,8 +74,55 @@ public class Files {
         }
     }
 
+    // Task5 Read a text file and write it to a target text file,
+    //changing all lowercase to uppercase and double spacing output text
+    public String changeText(String str){
+        char[] chars = str.toCharArray();
+        for (int i = 0; i < str.length(); i++){
+            if(Character.isUpperCase(chars[i])){
+                chars[i] = Character.toLowerCase(chars[i]);
+            } else if(Character.isLowerCase(chars[i])){
+                chars[i] = Character.toUpperCase(chars[i]);
+            }
+        }
+        str = replaceAll(new StringBuilder(String.copyValueOf(chars)), " ", "  ");
+        return str;
+    }
+
+    // replacing a space with a double space for 5 tasks
+    private String replaceAll(StringBuilder builder, String from, String to)
+    {
+        int index = builder.indexOf(from);
+        while (index != -1)
+        {
+            builder.replace(index, index + from.length(), to);
+            index += to.length(); // Move to the end of the replacement
+            index = builder.indexOf(from, index);
+        }
+        return builder.toString();
+    }
+    // file copy module for 5 tasks
+    public void copyFileWithChanges(String source, String dest) throws IOException {
+
+        try(FileInputStream fstream = new FileInputStream(source);
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream))){
+
+            try(FileOutputStream ostream = new FileOutputStream(dest);
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(ostream))) {
+
+                String strLine;
+                while ((strLine = br.readLine()) != null) {
+                    bw.write(changeText(strLine) + "\n");
+                    bw.flush();
+                }
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    // percent calculation for 4 tasks
     private int getScorePercent(long total, int percent){
-        System.out.println(total+" " +((total * percent) / 100));
         return (int) ((total * percent) / 100);
     }
 
@@ -97,10 +138,10 @@ public class Files {
              BufferedInputStream bis = new BufferedInputStream(fis)) {
             int bytesAmount = bis.read(buffer);
             //write each chunk of data into separate file with different number in name
-            String filePartName = String.format("%s.%03d", fileName, partCounter++);
+            String filePartName = String.format("%s_%03d_ForTask4.txt", fileName.substring(0,fileName.length()-4), partCounter++);
             File newFile = new File(f.getParent(), filePartName);
 
-            String filePartName1 = String.format("%s.%03d", fileName, partCounter++);
+            String filePartName1 = String.format("%s_%03d_ForTask4.txt", fileName.substring(0,fileName.length()-4), partCounter++);
             File newFile1 = new File(f.getParent(), filePartName1);
 
             try (FileOutputStream out = new FileOutputStream(newFile)) {
@@ -111,5 +152,4 @@ public class Files {
             }
         }
     }
-
 }

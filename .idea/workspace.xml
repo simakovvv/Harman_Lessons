@@ -34,40 +34,40 @@
           <entry key="003" value="1" />
           <entry key="004" value="1" />
           <entry key="005" value="1" />
-          <entry key="java" value="73" />
+          <entry key="java" value="76" />
           <entry key="out" value="3" />
-          <entry key="txt" value="6" />
+          <entry key="txt" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="73" />
-          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="JAVA" value="76" />
+          <entry key="PLAIN_TEXT" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="7824" />
+          <entry key="java" value="8359" />
           <entry key="out" value="9" />
-          <entry key="txt" value="20" />
+          <entry key="txt" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7824" />
-          <entry key="PLAIN_TEXT" value="36" />
+          <entry key="JAVA" value="8359" />
+          <entry key="PLAIN_TEXT" value="43" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Lesson1/Exercise4_Files/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="43" column="112" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="112" />
+            <state relative-caret-position="321">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,23 +75,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Lesson1/Exercise4_Files/Files.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+            <state relative-caret-position="185">
+              <caret line="143" column="114" selection-start-line="143" selection-start-column="114" selection-end-line="143" selection-end-column="114" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4418#4419#0" expanded="true" />
+                <element signature="e#4472#4473#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileOutputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="324" column="16" selection-start-line="324" selection-start-column="16" selection-end-line="324" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -194,6 +187,19 @@
               <item name="Harman_Lessons" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Harman_Lessons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Harman_Lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Harman_Lessons" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Harman_Lessons" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lesson1" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise4_Files" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -205,7 +211,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540447581526" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540453198159" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -366,7 +372,7 @@
       <workItem from="1540157848710" duration="22228000" />
       <workItem from="1540319315978" duration="19245000" />
       <workItem from="1540382111066" duration="429000" />
-      <workItem from="1540392549864" duration="9325000" />
+      <workItem from="1540392549864" duration="14385000" />
     </task>
     <task id="LOCAL-00001" summary="Task 3,4 completed">
       <created>1540330555001</created>
@@ -382,11 +388,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540375807020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Exercise3  task 4 completed">
+      <created>1540447599706</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540447599706</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70021000" />
+    <option name="totallyTimeSpent" value="75081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -497,7 +510,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task 3,4 completed" />
     <MESSAGE value="Exercise3  completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise3  completed" />
+    <MESSAGE value="Exercise3  task 4 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise3  task 4 completed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Lesson1/Task1/Main.java" />
@@ -631,9 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/temp.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -647,22 +658,52 @@
     <entry file="file://$PROJECT_DIR$/resources/temp.txt.001">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lesson1/Exercise4_Files/Files.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Character.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+        <state relative-caret-position="141">
+          <caret line="260" column="29" selection-start-line="260" selection-start-column="29" selection-end-line="260" selection-end-column="29" />
+          <folding>
+            <element signature="e#242085#242086#0" expanded="true" />
+            <element signature="e#242128#242129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-498">
+          <caret line="2050" column="21" selection-start-line="2037" selection-start-column="5" selection-end-line="2050" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/temp.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/tempForTask5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lesson1/Exercise4_Files/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lesson1/Exercise4_Files/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Lesson1/Exercise4_Files/Files.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="43" column="112" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="112" />
+        <state relative-caret-position="185">
+          <caret line="143" column="114" selection-start-line="143" selection-start-column="114" selection-end-line="143" selection-end-column="114" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4418#4419#0" expanded="true" />
+            <element signature="e#4472#4473#0" expanded="true" />
           </folding>
         </state>
       </provider>
