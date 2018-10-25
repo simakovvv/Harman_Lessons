@@ -35,12 +35,14 @@ public class Main {
         array3.randomFillArray(10);
         array3.printMass();
         System.out.println("Average digit:" + array3.averageDigit());
+        System.out.println("---------------------------------------------");
 
         System.out.println("Task5 progtram to get the average of all numbers in array with using StreamAPI");
         Arrays array4 = new Arrays(10,"int");
         array3.randomFillArray(10);
         array3.printMass();
         System.out.println("Average digit:" + array3.averageDigitWithStream());
+        System.out.println("---------------------------------------------");
 
 
     }

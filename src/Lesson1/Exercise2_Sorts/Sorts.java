@@ -9,8 +9,6 @@ public class Sorts {
     private ArrayList<Integer> task = new ArrayList<>();
     // sort by ascending three values
 
-
-
     public int equalsArray(ArrayList<Integer> task){
         int i = -2;// incorrect value
         if (this.task.size() == task.size()){
@@ -51,7 +49,6 @@ public class Sorts {
         }else {
             return ", ";
         }
-
     }
 
     //input method for the first task
