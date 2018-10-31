@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Syntax.Java;
 
 public class Arrays {
     private char[] massOfChar;
