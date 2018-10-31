@@ -12,11 +12,11 @@ public class CounterThread implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i <= length-1; i++){
+        for (int i = 0; i <= length - 1; i++) {
             instance.setCounter(1);
         }
-        if(instance instanceof CounterWithoutSync)
-           System.out.println("Not-syncronised counter № " + threadNum + ": " + instance.getCounter());
+        if (instance instanceof CounterWithoutSync)
+            System.out.println("Not-syncronised counter № " + threadNum + ": " + instance.getCounter());
         else
             System.out.println("Syncronised counter № " + threadNum + ": " + instance.getCounter());
     }

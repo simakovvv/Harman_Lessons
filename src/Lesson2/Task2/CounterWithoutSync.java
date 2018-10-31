@@ -11,6 +11,6 @@ public class CounterWithoutSync implements ICounter {
     }
 
     public void setCounter(int i) {
-        this.counter+=i;
+        this.counter += i;
     }
 }

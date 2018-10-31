@@ -2,10 +2,10 @@ package Lesson2.Task5;
 
 public class FirstSubclass implements Runnable {
     private LockObject lock;
+
     public FirstSubclass(LockObject t) {
         this.lock = t;
     }
-
 
     @Override
     public void run() {

@@ -16,9 +16,9 @@ public class Main {
         //array1.keyboardInput();
         array1.randomFillArray(100);// set bounds
         array1.printMass();
-        System.out.println("Minimal distance between elements:" + array1.findMinimalDistanceIndex() + " and " + (array1.findMinimalDistanceIndex()+1));
+        System.out.println("Minimal distance between elements:" + array1.findMinimalDistanceIndex() + " and " + (array1.findMinimalDistanceIndex() + 1));
         System.out.println("Distantion: " +
-                Math.abs((array1.getMassOfChar()[array1.findMinimalDistanceIndex()+1] - array1.getMassOfChar()[array1.findMinimalDistanceIndex()])));
+                Math.abs((array1.getMassOfChar()[array1.findMinimalDistanceIndex() + 1] - array1.getMassOfChar()[array1.findMinimalDistanceIndex()])));
         System.out.println("---------------------------------------------");
         System.out.println();
 
@@ -38,7 +38,7 @@ public class Main {
         System.out.println("---------------------------------------------");
 
         System.out.println("Task5 progtram to get the average of all numbers in array with using StreamAPI");
-        Arrays array4 = new Arrays(10,"int");
+        Arrays array4 = new Arrays(10, "int");
         array3.randomFillArray(10);
         array3.printMass();
         System.out.println("Average digit:" + array3.averageDigitWithStream());

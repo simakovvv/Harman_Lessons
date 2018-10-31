@@ -9,13 +9,13 @@ public class Sorts {
     private ArrayList<Integer> task = new ArrayList<>();
     // sort by ascending three values
 
-    public int equalsArray(ArrayList<Integer> task){
+    public int equalsArray(ArrayList<Integer> task) {
         int i = -2;// incorrect value
-        if (this.task.size() == task.size()){
+        if (this.task.size() == task.size()) {
             i = 0;
-        } else if(this.task.size() < task.size()){
+        } else if (this.task.size() < task.size()) {
             i = -1;
-        } else if(this.task.size() > task.size()){
+        } else if (this.task.size() > task.size()) {
             i = 1;
         }
         return i;
@@ -23,66 +23,67 @@ public class Sorts {
 
     public Sorts() {
     }
+
     public Sorts(int length) {
         randomFilling(length);
     }
 
 
-    public void sortByAscending(){
-       Collections.sort(task);
+    public void sortByAscending() {
+        Collections.sort(task);
     }
 
     public ArrayList<Integer> getTask() {
         return task;
     }
 
-    public void printArray(){
+    public void printArray() {
         task.stream().forEach((p) ->
-        System.out.print( p + separator(p)));
+                System.out.print(p + separator(p)));
         System.out.println();
     }
 
-    public String separator(int p){
-        if(p == task.get(task.size()-1)) {
+    public String separator(int p) {
+        if (p == task.get(task.size() - 1)) {
 
             return ".";
-        }else {
+        } else {
             return ", ";
         }
     }
 
     //input method for the first task
-    public void keyboardInput(int length){
+    public void keyboardInput(int length) {
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         System.out.println("Enter tree number: ");
-        for (int i = 0; i<= length-1;i++)
-           task.add(reader.nextInt()); // Scans the next token of the input as an int.
+        for (int i = 0; i <= length - 1; i++)
+            task.add(reader.nextInt()); // Scans the next token of the input as an int.
         //once finished
         reader.close();
     }
 
-    public void randomFilling(int length){
+    public void randomFilling(int length) {
 
         Random random = new Random();
-        for (int i = 0; i <=length; i++){
+        for (int i = 0; i <= length; i++) {
             task.add(random.nextInt(length));
         }
     }
 
-    public int findMaxInt(){
+    public int findMaxInt() {
         return Collections.max(task);
     }
 
-    public int findMaxIntWithStreams(){
+    public int findMaxIntWithStreams() {
         return task.stream().collect(Collectors.summarizingInt(Integer::intValue)).getMax();
     }
 
-    public void sortArrayWithStream(){
+    public void sortArrayWithStream() {
         task.stream().sorted().forEach((p) ->
-                System.out.print( p + separator(p)));
+                System.out.print(p + separator(p)));
     }
 
-    public void compareArrays(ArrayList<Integer> task1){
+    public void compareArrays(ArrayList<Integer> task1) {
 
     }
 

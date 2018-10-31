@@ -28,14 +28,14 @@ public class Main {
         try {
 
             exampleThread.join();
-            ThreadKillerClass.isAliveThread(exampleThread,myThread.getCount());
+            ThreadKillerClass.isAliveThread(exampleThread, myThread.getCount());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         try {
 
             exampleThread1.join();
-            ThreadKillerClass.isAliveThread(exampleThread1,myThread1.getCount());
+            ThreadKillerClass.isAliveThread(exampleThread1, myThread1.getCount());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

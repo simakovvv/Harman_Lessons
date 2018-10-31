@@ -8,7 +8,7 @@ public class CounterWithSync implements ICounter {
     }
 
     public synchronized void setCounter(int i) {
-        this.counter+=i;
+        this.counter += i;
     }
 
 }

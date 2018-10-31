@@ -14,7 +14,7 @@ public class CounterThread implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i <= length-1; i++){
+        for (int i = 0; i <= length - 1; i++) {
             instance.setCounter(1);
         }
 

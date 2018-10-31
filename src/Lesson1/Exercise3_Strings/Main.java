@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Task1 write a program to get the character at the given index within the string. ");
         Strings string = new Strings();
         string.keyboardStringInput();
-        System.out.println("the index of the entered letter is equal to:" );
+        System.out.println("the index of the entered letter is equal to:");
         System.out.println(string.getIndex(string.keyboardCharInput()));
         System.out.println("---------------------------------------------");
 

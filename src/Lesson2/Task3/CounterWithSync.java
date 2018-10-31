@@ -17,8 +17,8 @@ public class CounterWithSync implements ICounter {
 
     public synchronized void setCounter(int i) {
 
-        this.counter+=i;
-        if(counter == 100000){
+        this.counter += i;
+        if (counter == 100000) {
             notify();
         }
     }
