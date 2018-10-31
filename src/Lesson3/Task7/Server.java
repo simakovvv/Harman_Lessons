@@ -1,6 +1,5 @@
 package Lesson3.Task7;
 
-
 import java.io.*;
 import java.net.Socket;
 
@@ -29,7 +28,7 @@ public class Server extends Thread {
     public void run() {
         //Creating I / O streams for a socket
         try (ObjectOutputStream oos = new ObjectOutputStream((socket.getOutputStream()));
-             ObjectInputStream oin = new ObjectInputStream((socket.getInputStream()))){
+             ObjectInputStream oin = new ObjectInputStream((socket.getInputStream()))) {
             String line = null;
             Object msg = null;
             while (true) {
@@ -41,9 +40,15 @@ public class Server extends Thread {
                 }
                 line = (String) msg;
                 System.out.println(String.format(TEMP_MSG, num) + line);
-                if(line.equals("index")){
+                if (line.equals("index")) {
                     msg = getFoldersMember(path);
                     oos.writeObject(msg);
+                    oos.flush();
+                } else if (line.contains("get")) {
+                    File file = new File(path + line.substring(4, line.length()));
+
+                    oos.writeObject(file);
+                    // Finish object transfer
                     oos.flush();
                 } else {
                     oos.writeObject("Server recieve text: unknown team");
@@ -51,6 +56,7 @@ public class Server extends Thread {
                     oos.flush();
                 }
                 System.out.println();
+
                 if (line.equalsIgnoreCase("quit")) {
                     socket.close();
                     System.out.println(String.format(TEMP_CONN, num));
@@ -62,9 +68,11 @@ public class Server extends Thread {
             System.out.println("Exeption : " + e);
         }
     }
+
     public File[] getFoldersMember(String path) {
         File dir1 = new File(path);
         return dir1.listFiles();
     }
+
 }
 

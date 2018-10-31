@@ -3,7 +3,6 @@ package Lesson3.Task7;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Client {
@@ -45,9 +44,13 @@ public class Client {
                     e.printStackTrace();
                 }
                 if (msg instanceof File[]) {
-                    for (File f:(File[]) msg ) {
+                    for (File f : (File[]) msg) {
                         System.out.println(f);
                     }
+                    System.out.println("\n Enter a type \"get <File>\" command to get the desired file.");
+                }
+                if (msg instanceof File) {
+                    printFile((File) msg);
                 }
                 if (msg instanceof String) {
                     //We look, messages if they string
@@ -68,6 +71,19 @@ public class Client {
                     }
                 }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void printFile(File file) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line = null;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

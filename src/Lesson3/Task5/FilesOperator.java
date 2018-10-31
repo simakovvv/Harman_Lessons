@@ -10,7 +10,6 @@ public class FilesOperator {
         File dir1 = new File(path);
         return dir1.listFiles();
     }
-
     public File[] reverse(File[] arr) {
         List<File> list = Arrays.asList(arr);
         Collections.reverse(list);

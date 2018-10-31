@@ -12,7 +12,6 @@ public class ServerListener {
     private static String IP = "localhost";
 
     public static void main(String[] args) {
-
         // This method runs in a parallel stream and listens to new connections all the time.
         //If hears, creates stream - demon
         int i = 0; // Connection count

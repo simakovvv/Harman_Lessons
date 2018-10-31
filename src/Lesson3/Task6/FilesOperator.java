@@ -26,8 +26,6 @@ public class FilesOperator {
                 bw.write(strLine + "\n");
                 bw.flush();
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

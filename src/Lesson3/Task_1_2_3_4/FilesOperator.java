@@ -71,7 +71,6 @@ public class FilesOperator {
         }
         Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
         printList(list);
-
     }
 
     public void printList(ArrayList arrayList) {
